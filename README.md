@@ -1,5 +1,10 @@
-# guide-ouricuri
-Simple project made with reactjs using api data http://ourikas.github.io/companies.json
+# Guide Ouricuri
+## Simple project made with reactjs using api data: http://ourikas.github.io/companies.json
 
-Oficial: http://ourikas.github.io/#/
-Author: https://github.com/mauriciomelo
+List with search of companies in the city of Ouricuri
+
+Oficial project: [Here](http://ourikas.github.io)
+
+Repository: https://github.com/Ourikas/ourikas
+
+Author: [Mauricio Melo](https://github.com/mauriciomelo)
