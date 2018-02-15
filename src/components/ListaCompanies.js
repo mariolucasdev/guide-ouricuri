@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import Item from './Item';
-// import {
-//   BrowserRouter as Router,
-//   Link,
-//   Route
-// } from 'react-router-dom';
 
 class ListaCompanies extends Component {
   constructor(props) {
