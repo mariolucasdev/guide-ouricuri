@@ -1,11 +1,33 @@
 body {
-  background: #192a56;
+  background: #17347e;
+  /* background-image: url('imgs/city.png'); */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.App {
+.title {
   text-align: center;
+  color: white;
 }
 
-.logo {
-  color: aliceblue;
+.content {
+  margin: 4px;
+  padding: 10px;
+}
+
+.background {
+  background: white;
+  padding: 20px 20px 20px 50px; 
+  border-radius: 10px;
+}
+
+.title-about {
+  text-align: center;
+  color: rgb(14, 42, 136);
+}
+
+.text-about {
+  color: #555;
+  font-weight: bold;
 }
