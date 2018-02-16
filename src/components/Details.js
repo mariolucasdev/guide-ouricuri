@@ -22,7 +22,7 @@ export default class Details extends Component {
     return (
       <div className="container">
         {this.companie.map(item => 
-          <div className="background">
+          <div className="background" key={item.id}>
             <h1>{item.name}</h1>
             <p>{item.description}</p>
             
