@@ -32,7 +32,7 @@ List with search of companies in the city of Ouricuri
 
 --------------------------------------------------
 
-Oficial project: [Ourikas](http://ourikas.github.io)
+Oficial project: [Here](http://ourikas.github.io)
 
 Repository: https://github.com/Ourikas/ourikas
 

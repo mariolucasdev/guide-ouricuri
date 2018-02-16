@@ -1,6 +1,6 @@
 {
-  "name": "learn-react-one-video",
-  "version": "0.1.0",
+  "name": "guide-ouricuri",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
