@@ -21,11 +21,17 @@ export default class Home extends Component {
 
   search(text) {
     this.setState({ text: text.target.value })
-    this.companiesSearch = this.state.companies.filter(item => {
-      const itemName = item.name.toUpperCase();
-      const textInput = this.state.text.toUpperCase();
-      return itemName.indexOf(textInput) > -1;
-    });
+    if(text.target.value == '') {
+      this.companiesSearch = []
+    }else {
+      this.companiesSearch = this.state.companies.filter(item => {
+        const itemName = item.name.toUpperCase();
+        const textInput = this.state.text.toUpperCase();
+        return itemName.indexOf(textInput) > -1;
+      });
+    }
+
+    console.log(this.state.text)
   }
 
   render() {
