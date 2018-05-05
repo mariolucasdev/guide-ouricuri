@@ -1,17 +1,77 @@
 import React, { Component } from "react";
 
 export default class Companie extends Component {
+  // renderTags(keywords) {
+  //   const kwords = keywords.split(", ");
+  //   return kwords.map(kw => <span className="tag is-link">{kw}</span>);
+  // }
   render() {
     return (
       <div>
-        <ul>
-          {this.props.data.map(companie => (
-            <li key={companie.id}>
-              <h2>{companie.name}</h2>
-              <p>{companie.description}</p>
-            </li>
-          ))}
-        </ul>
+        {this.props.data.map(companie => (
+          <li className="card box" key={companie.id}>
+            <div className="card-content">
+              <div className="media">
+                <div className="media-left">
+                  <figure className="image is-96x96">
+                    <img
+                      src="http://emblemsbf.com/img/77148.jpg"
+                      alt={companie.name}
+                    />
+                  </figure>
+                </div>
+              </div>
+              <div className="media-content">
+                <div className="content">
+                  <h2 className="title is-4">{companie.name}</h2>
+                  <p className="content">{companie.description}</p>
+                </div>
+              </div>
+
+              <div className="media-content">
+                <div className="content">
+                  <ul className="contact-list">
+                    {companie.contact.site ? (
+                      <li>
+                        <a
+                          className="tag is-dark is-medium"
+                          href={companie.contact.site}
+                        >
+                          {companie.contact.site}
+                        </a>
+                      </li>
+                    ) : (
+                      ""
+                    )}
+
+                    {companie.contact.email ? (
+                      <li>
+                        <span className="tag is-danger is-medium">
+                          {companie.contact.email}
+                        </span>
+                      </li>
+                    ) : (
+                      ""
+                    )}
+
+                    {companie.contact.facebook ? (
+                      <li>
+                        <a
+                          className="tag is-info is-medium"
+                          href={companie.contact.facebook}
+                        >
+                          facebook
+                        </a>
+                      </li>
+                    ) : (
+                      ""
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
       </div>
     );
   }
