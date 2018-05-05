@@ -35,15 +35,18 @@ export default class Search extends Component {
       <div>
         <input
           type="text"
+          className="input is-primary"
           placeholder="search an companie here..."
           onChange={evt => this.handlerSearch(evt)}
         />
 
-        {text === "" ? (
-          <Companie data={companies} />
-        ) : (
-          <Companie data={this.filterCompanies} />
-        )}
+        <div className="container-list">
+          {text === "" ? (
+            <Companie data={this.state.companies} />
+          ) : (
+            <Companie data={this.filterCompanies} />
+          )}
+        </div>
       </div>
     );
   }

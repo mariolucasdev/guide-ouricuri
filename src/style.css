@@ -1,0 +1,23 @@
+.input {
+  position: relative;
+  top: 20px;
+  bottom: 20px;
+  padding: 25px;
+}
+
+.container-list {
+  position: relative;
+  top: 30px;
+}
+
+.logo-title {
+  color: rgb(39, 92, 207);
+  text-align: center;
+}
+
+/* social and links contacts */
+
+.contact-list li {
+  display: inline-block;
+  margin: 0px 5px;
+}
