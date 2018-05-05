@@ -1,6 +1,6 @@
 # Guide Ouricuri
 
-Simple project made with reactjs using api data: [data](http://ourikas.github.io/companies.json)
+Simple project made with reactjs using api data: [here](http://ourikas.github.io/companies.json)
 
 List with search of companies in the city of Ouricuri
 
@@ -9,12 +9,12 @@ List with search of companies in the city of Ouricuri
     git clone https://github.com/henriquenasc/guide-ouricuri.git
 
     cd guide-ouricuri
-  
-**Install the Dependencies**
-    
-    yarn install
 
-  or
+**Install the Dependencies**
+
+ yarn install
+
+or
 
     npm install
 
@@ -22,7 +22,7 @@ List with search of companies in the city of Ouricuri
 
     yarn start
 
-  or
+or
 
     npm run start
 
@@ -30,7 +30,7 @@ List with search of companies in the city of Ouricuri
 
     localhost:3000
 
---------------------------------------------------
+---
 
 Oficial project: [Here](http://ourikas.github.io)
 
