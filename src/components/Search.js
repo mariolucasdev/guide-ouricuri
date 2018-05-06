@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Companie from "./Companie";
+import React, { Component } from 'react';
+import Companie from './Companie';
 
 export default class Search extends Component {
   state = {
-    text: ""
+    text: ''
   };
 
   filterCompanies = [];
@@ -32,11 +32,7 @@ export default class Search extends Component {
         />
 
         <div className="container-list">
-          {text === "" ? (
-            <Companie data={companies} />
-          ) : (
-            <Companie data={this.filterCompanies} />
-          )}
+          {text !== '' && <Companie data={this.filterCompanies} />}
         </div>
       </div>
     );

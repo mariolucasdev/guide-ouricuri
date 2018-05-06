@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Companie extends Component {
   render() {
@@ -10,10 +11,12 @@ export default class Companie extends Component {
               <div className="media">
                 <div className="media-left">
                   <figure className="image is-96x96">
-                    <img
-                      src="http://emblemsbf.com/img/77148.jpg"
-                      alt={companie.name}
-                    />
+                    <Link to={`/companie/${companie.name}`}>
+                      <img
+                        src="http://emblemsbf.com/img/77148.jpg"
+                        alt={companie.name}
+                      />
+                    </Link>
                   </figure>
                 </div>
               </div>

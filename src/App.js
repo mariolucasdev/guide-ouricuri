@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import axios from 'axios';
+// import Companie from './components/Companie';
+import Details from './components/Details';
 import Search from './components/Search';
 import 'bulma/css/bulma.css';
 import './style.css';
@@ -20,7 +23,21 @@ class App extends Component {
         <div className="container is-fluid">
           <div>
             <h1 className="title is-1 logo-title">Agenda Ouricuri</h1>
-            <Search companies={this.state.companies} />
+            <Route
+              path="/"
+              exact
+              render={() => <Search companies={this.state.companies} />}
+            />
+
+            <Route
+              path="/companie/:name"
+              render={() => (
+                <div>
+                  <Search companies={this.state.companies} />
+                  <Details />
+                </div>
+              )}
+            />
           </div>
         </div>
       </div>
