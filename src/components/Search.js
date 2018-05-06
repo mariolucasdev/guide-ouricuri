@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import Companie from './Companie';
+import React, { Component } from "react";
+import Companie from "./Companie";
 
 export default class Search extends Component {
   state = {
-    text: ''
+    text: ""
   };
 
   filterCompanies = [];
@@ -27,12 +27,12 @@ export default class Search extends Component {
         <input
           type="text"
           className="input is-primary"
-          placeholder="search an companie here..."
+          placeholder="Busque por uma empresa ou local aqui..."
           onChange={evt => this.handlerSearch(evt)}
         />
 
         <div className="container-list">
-          {text === '' ? (
+          {text === "" ? (
             <Companie data={companies} />
           ) : (
             <Companie data={this.filterCompanies} />
