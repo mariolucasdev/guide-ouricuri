@@ -6,8 +6,9 @@
 }
 
 .container-list {
-  position: relative;
-  top: 30px;
+  position: absolute;
+  top: 200px;
+  width: 100%;
 }
 
 .logo-title {

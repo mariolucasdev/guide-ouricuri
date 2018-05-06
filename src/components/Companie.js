@@ -10,8 +10,11 @@ export default class Companie extends Component {
             <div className="card-content">
               <div className="media">
                 <div className="media-left">
-                  <figure className="image is-96x96">
-                    <Link to={`/companie/${companie.name}`}>
+                  <figure
+                    className="image is-96x96"
+                    onClick={this.props.handleClick}
+                  >
+                    <Link to={`/companie/${companie.alias}`}>
                       <img
                         src="http://emblemsbf.com/img/77148.jpg"
                         alt={companie.name}

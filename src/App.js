@@ -28,16 +28,7 @@ class App extends Component {
               exact
               render={() => <Search companies={this.state.companies} />}
             />
-
-            <Route
-              path="/companie/:name"
-              render={() => (
-                <div>
-                  <Search companies={this.state.companies} />
-                  <Details />
-                </div>
-              )}
-            />
+            <Route path="/companie/:uri" component={Details} />
           </div>
         </div>
       </div>

@@ -3,7 +3,8 @@ import Companie from './Companie';
 
 export default class Search extends Component {
   state = {
-    text: ''
+    text: '',
+    index: ''
   };
 
   filterCompanies = [];
@@ -18,21 +19,32 @@ export default class Search extends Component {
     });
   }
 
+  clearValue = e => {
+    const index = e.target.attributes.src.baseURI.split('/').slice(-1)[0];
+    this.setState({ index });
+    this.setState({ text: '' });
+  };
+
   render() {
     const { text } = this.state;
-    const { companies } = this.props;
 
     return (
       <div>
         <input
           type="text"
           className="input is-primary"
+          value={text}
           placeholder="Busque por uma empresa ou local aqui..."
           onChange={evt => this.handlerSearch(evt)}
         />
 
         <div className="container-list">
-          {text !== '' && <Companie data={this.filterCompanies} />}
+          {text !== '' && (
+            <Companie
+              data={this.filterCompanies}
+              handleClick={evt => this.clearValue(evt)}
+            />
+          )}
         </div>
       </div>
     );
