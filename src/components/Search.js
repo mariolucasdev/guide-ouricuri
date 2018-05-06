@@ -1,28 +1,17 @@
-import React, { Component } from "react";
-import Companie from "./Companie";
-import axios from "axios";
+import React, { Component } from 'react';
+import Companie from './Companie';
 
 export default class Search extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    text: ''
+  };
 
-    this.state = {
-      companies: [],
-      text: ""
-    };
-
-    this.filterCompanies = [];
-  }
-
-  async componentDidMount() {
-    const response = await axios.get("http://ourikas.github.io/companies.json");
-    this.setState({ companies: response.data });
-  }
+  filterCompanies = [];
 
   handlerSearch(evt) {
     this.setState({ text: evt.target.value.trim() });
 
-    this.filterCompanies = this.state.companies.filter(comp => {
+    this.filterCompanies = this.props.companies.filter(comp => {
       return (
         comp.name.toLowerCase().indexOf(this.state.text.toLowerCase()) > -1
       );
@@ -30,7 +19,9 @@ export default class Search extends Component {
   }
 
   render() {
-    const { text, companies } = this.state;
+    const { text } = this.state;
+    const { companies } = this.props;
+
     return (
       <div>
         <input
@@ -41,8 +32,8 @@ export default class Search extends Component {
         />
 
         <div className="container-list">
-          {text === "" ? (
-            <Companie data={this.state.companies} />
+          {text === '' ? (
+            <Companie data={companies} />
           ) : (
             <Companie data={this.filterCompanies} />
           )}

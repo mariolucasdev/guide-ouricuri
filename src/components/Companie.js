@@ -1,10 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 export default class Companie extends Component {
-  // renderTags(keywords) {
-  //   const kwords = keywords.split(", ");
-  //   return kwords.map(kw => <span className="tag is-link">{kw}</span>);
-  // }
   render() {
     return (
       <div>
@@ -41,7 +37,7 @@ export default class Companie extends Component {
                         </a>
                       </li>
                     ) : (
-                      ""
+                      ''
                     )}
 
                     {companie.contact.email ? (
@@ -51,7 +47,7 @@ export default class Companie extends Component {
                         </span>
                       </li>
                     ) : (
-                      ""
+                      ''
                     )}
 
                     {companie.contact.facebook ? (
@@ -64,7 +60,7 @@ export default class Companie extends Component {
                         </a>
                       </li>
                     ) : (
-                      ""
+                      ''
                     )}
                   </ul>
                 </div>
